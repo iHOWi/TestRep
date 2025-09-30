@@ -111,7 +111,16 @@ PATCH_LIB("libGCloudVoice.so","0x64F28","00 00 A0 E3 1E FF 2F E1"); //Report Blo
 PATCH_LIB("libGCloudVoice.so","0x64FA4","00 00 A0 E3 1E FF 2F E1"); //Report Block
 PATCH_LIB("libGCloudVoice.so","0x65024","00 00 A0 E3 1E FF 2F E1"); //Report Block
 PATCH_LIB("libGCloudVoice.so","0x6728C","00 00 A0 E3 1E FF 2F E1"); //Report Block
+        
+        const char* bypassText = "Online Bypass Work";
+        ImVec2 textSize = ImGui::CalcTextSize(bypassText);
+        ImGui::GetForegroundDrawList()->AddText(
+            {20.0f, (float)glHeight - textSize.y - 20.0f},
+            ImColor(0, 255, 0, 180),
+            bypassText      
     }
 }
+
+
 
 #endif
